@@ -16,4 +16,5 @@ public interface BBSDao {
 	public void updateArticle(BBSDto article);
 	public void insertFile(FileDto fileDto);
 	public List<FileDto> getFiles(int articleNum);
+	public int commentCount(int articleNum);
 }

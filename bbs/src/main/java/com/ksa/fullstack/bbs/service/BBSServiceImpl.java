@@ -115,6 +115,13 @@ public class BBSServiceImpl implements BBSService {
 		res.setHeader("Content-Disposition", "attachment;" +" filename=\""+originalFileName+ "\";");
 		FileSystemResource fsr= new FileSystemResource(saveDir+savedFileName);
 		return fsr;
+	
+	
+	}
+
+	@Override
+	public int commentCount(int articleNum) {
+		return bbsDao.commentCount(articleNum);
 	}
 	
 	

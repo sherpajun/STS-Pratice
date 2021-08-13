@@ -54,6 +54,11 @@
 		where articleNum=#{articleNum}
 	</select>
 	
+	<select id="commentCount" parameterType="int" resultType="int">
+		select count(*)
+		from comments
+		where articleNum=#{articleNum}
+	</select>
 	
 	
 	

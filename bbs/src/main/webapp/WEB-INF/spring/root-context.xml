@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<!-- 1. 접속할 db에 대한 정보( 주소,드라이버, 아이디, 패스워드....) -->
@@ -33,7 +35,7 @@
 	 <bean id="saveDir" class="java.lang.String">
 	 	<constructor-arg value="c:/util/upload" />
 	 </bean>
-	
+	<mybatis-spring:scan base-package="com.ksa.fullstack.comment.dao"/>
 	
 	
 	

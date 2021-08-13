@@ -52,6 +52,7 @@ public class BBSController {
 	public String content(@RequestParam("articleNum") int articleNum, Model model) {		
 		model.addAttribute("article", bbsService.content(articleNum));	
 		model.addAttribute("fileList", bbsService.getFiles(articleNum)); 
+		model.addAttribute("commentCount", bbsService.commentCount(articleNum));
 		return "content";
 
 	}

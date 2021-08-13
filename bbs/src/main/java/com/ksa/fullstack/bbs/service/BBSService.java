@@ -22,5 +22,6 @@ public interface BBSService {
 	public void updateArticle(BBSDto article);
 	public List<FileDto> getFiles(int articleNum);
 	public FileSystemResource download(String savedFileName,HttpServletResponse res);
+	public int commentCount(int articleNum);
 
 }

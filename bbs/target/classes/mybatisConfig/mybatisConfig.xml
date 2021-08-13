@@ -19,5 +19,6 @@
 	<typeAliases>
 		<typeAlias type="com.ksa.fullstack.bbs.dto.BBSDto"  alias="article"/>
 		<typeAlias type="com.ksa.fullstack.bbs.dto.FileDto"  alias="fileDto"/>
+		<typeAlias type="com.ksa.fullstack.comment.dto.CommentDto"  alias="comment"/>
 	</typeAliases>
 </configuration>
