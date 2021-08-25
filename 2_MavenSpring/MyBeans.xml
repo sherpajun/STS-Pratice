@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+  <bean id="h" class="my.test1.Hello"></bean>
+<!--   <bean id="c" class="my.test2.shape.Circle"></bean> -->
+<!--   <bean id="r" class="my.test2.shape.Rectangle"></bean> -->
+<!--   <bean id="t" class="my.test2.shape.Triangle"></bean> -->
+</beans>
