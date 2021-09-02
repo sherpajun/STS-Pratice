@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+
+<mapper namespace="com.example.web.dao.MemberDAO"><!-- DAO의 풀 이퀄리파이드 이름이여야한다. -->
+	<insert id="memberInsert" parameterType="member"><!-- 첫번째 글자만 대문자를 소문자로 바꿔서 입력 -->
+	insert into Member(id,pw,name) values(#{id},#{pw},#{name})
+	
+	</insert>
+	
+	<select id="login" parameterType="member" resultType="String">
+	select name from Member where id=#{id} and pw=#{pw}
+	</select>
+
+</mapper>
