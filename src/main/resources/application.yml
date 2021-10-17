@@ -1,0 +1,14 @@
+server:
+  port: 7080
+  
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521
+    username: cdj
+    password: 1234
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+
+  jpa:
+   hibernate:
+     ddl-auto: none 
+   show-sql: true
