@@ -1,11 +1,16 @@
 server:
   port: 7080
+  servlet:
+   context-path: /
+   encoding:
+    charset: UTF-8
+
   
 spring:
   datasource:
     url: jdbc:oracle:thin:@localhost:1521
     username: cdj
-    password: 1234
+    password: 4321
     driver-class-name: oracle.jdbc.driver.OracleDriver
 
   jpa:

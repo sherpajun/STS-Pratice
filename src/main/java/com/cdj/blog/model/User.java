@@ -11,7 +11,16 @@ import javax.persistence.Id;
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.CreationTimestamp;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @Entity // user클래스가 sql에 테이블이 생성된다.
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder//빌더 패턴
 public class User {
 	
 	@Id//프라이머리 키가 필요하다.
