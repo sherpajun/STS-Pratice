@@ -13,7 +13,7 @@ spring:
     password: 4321
     driver-class-name: oracle.jdbc.driver.OracleDriver
 
-  jpa:
-   hibernate:
-     ddl-auto: create
-   show-sql: true
+#  jpa:
+#   hibernate:
+#     ddl-auto: create
+#   show-sql: true
