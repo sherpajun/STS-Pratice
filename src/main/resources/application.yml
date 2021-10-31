@@ -8,12 +8,23 @@ server:
   
 spring:
   datasource:
-    url: jdbc:oracle:thin:@localhost:1521
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?serverTimezone=Asia/Seoul
     username: cdj
-    password: 4321
-    driver-class-name: oracle.jdbc.driver.OracleDriver
+    password: cdj1234
 
-#  jpa:
-#   hibernate:
-#     ddl-auto: create
-#   show-sql: true
+
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      use-new-id-generator-mappings: false
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+
+  jackson:
+    serialization:
+      fail-on-empty-beans: false

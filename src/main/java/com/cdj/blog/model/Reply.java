@@ -8,20 +8,22 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
+
 import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.CreationTimestamp;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
 
-@Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Data
 @Entity
 public class Reply {
 	@Id
@@ -35,7 +37,7 @@ public class Reply {
 	@JoinColumn(name="boardid")
 	private Board board;
 	
-	@ManyToMany
+	@ManyToOne
 	@JoinColumn(name="userid")
 	private User user;
 	

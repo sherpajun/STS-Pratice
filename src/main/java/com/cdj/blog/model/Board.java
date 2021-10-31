@@ -2,6 +2,7 @@ package com.cdj.blog.model;
 
 import java.sql.Timestamp;
 
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,11 +20,12 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity // user클래스가 sql에 테이블이 생성된다.
+// user클래스가 sql에 테이블이 생성된다.
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder//빌더 패턴
+@Entity 
 public class Board {
 
 	@Id
@@ -43,6 +45,8 @@ public class Board {
 	@JoinColumn(name="userid")
 	private User user; //DB는 오브젝트를 저장 할 수 없다. 포린키, 자바는 오브젝트를 저장할 수 있다.JPA를 사용하면 오브젝트로 그대로 인식이 가능하다
 	
+//	@OneToMany(mappedBy ="board")//.연관관계 주인이 아님 즉 FK가 아님 =>DB에 컬럼 생성 금지
+//	private List<Reply>reply;
 	@CreationTimestamp
 	private Timestamp createDate;
 	
