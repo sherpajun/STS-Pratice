@@ -1,14 +1,30 @@
 server:
   port: 7080
+  servlet:
+   context-path: /
+   encoding:
+    charset: UTF-8
+
   
 spring:
   datasource:
-    url: jdbc:oracle:thin:@localhost:1521
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?serverTimezone=Asia/Seoul
     username: cdj
-    password: 1234
-    driver-class-name: oracle.jdbc.driver.OracleDriver
+    password: cdj1234
+
 
   jpa:
-   hibernate:
-     ddl-auto: none 
-   show-sql: true
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      use-new-id-generator-mappings: false
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
